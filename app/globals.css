@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* ===============================
+   Tailwind v4 Theme Tokens
+================================ */
+@theme {
+  /* Brand colors */
+  --color-green: #006400;
+  --color-lightgreen: #3CB371;
+  --color-white: #FFFFFF;
+  --color-offwhite: #F7FAFC;
+  --color-grey: #4A5568;
+
+  --color-black: #000000;
+  --color-dark-grey: #2D3748;
+  --color-light-grey: #A0AEC0;
+
+  --color-accent-gold: #D4AF37;
+  --color-accent-brown: #8B4513;
+
+  /* Fonts */
+  --font-family-sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-family-serif: 'Playfair Display', 'Georgia', serif;
+  --font-family-mono: 'SF Mono', 'Monaco', monospace;
+
+  /* Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+/* ===============================
+   Base styles
+================================ */
+body {
+  @apply bg-white text-grey font-sans;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif font-bold text-green;
+}
+
+h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+h3 { @apply text-2xl md:text-3xl lg:text-4xl; }
+h4 { @apply text-xl md:text-2xl lg:text-3xl; }
+
+p {
+  @apply leading-relaxed;
+}
+
+a {
+  @apply text-lightgreen hover:text-green transition-colors duration-300;
+}
+
+/* ===============================
+   Components & utilities
+================================ */
+@layer utilities {
+  .container-padding {
+    @apply px-4 md:px-8 lg:px-16;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-green text-white px-6 py-3 rounded-lg font-semibold
+           hover:opacity-90 hover:shadow-lg transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-lightgreen text-white px-6 py-3 rounded-lg font-semibold
+           hover:opacity-90 hover:shadow-lg transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-green text-green px-6 py-3 rounded-lg font-semibold
+           hover:bg-green hover:text-white transition-all duration-300;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .card-offwhite {
+    @apply bg-offwhite rounded-xl shadow-sm p-6;
+  }
+
+  /* Forms */
+  .form-input {
+    @apply w-full px-4 py-3 border border-light-grey rounded-lg
+           focus:ring-2 focus:ring-lightgreen focus:border-transparent outline-none;
+  }
+}
+
+/* ===============================
+   Extras
+================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-offwhite;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-lightgreen rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green;
+}
+
+::selection {
+  @apply bg-lightgreen text-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+hr {
+  @apply border-light-grey my-8;
+}

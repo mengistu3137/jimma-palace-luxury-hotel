@@ -128,17 +128,18 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-emerald-900/5 pointer-events-none z-10" />
                 
                 {/* The pinned location iframe */}
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.382098484196!2d36.8322!3d7.6698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1655021966085a13%3A0xc07a4a984422941b!2sJimma%20Palace%20Hotel!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0, filter: 'grayscale(0.1) contrast(1.1)' }} 
-                  allowFullScreen="" 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Jimma Palace Hotel Location"
-                  className="group-hover:grayscale-0 transition-all duration-700"
-                ></iframe>
+               <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.40!2d36.8259774!3d7.6740717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17adb9004d3098ad%3A0x158f3bf65ed308fe!2sJimma%20Palace%20Hotel!5e0!3m2!1sen!2set!4v1770759519524"
+  width="100%"
+  height="100%"
+  style={{ border: 0, filter: "grayscale(0.1) contrast(1.1)" }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Jimma Palace Hotel Location"
+  className="group-hover:grayscale-0 transition-all duration-700"
+/>
+
 
                 {/* Floating Directions Button using your short link */}
                 <div className="absolute bottom-6 left-6 right-6 z-20">

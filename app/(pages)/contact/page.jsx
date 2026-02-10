@@ -53,7 +53,7 @@ export default function ContactPage() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-serif text-emerald-100 mb-8"
           >
-            Get In <span className="italic font-light text-emerald-200">Touch</span>
+            <span className="italic font-light text-emerald-200">Get In</span> <span className="italic font-light text-emerald-200">Touch</span>
           </motion.h1>
 
           <motion.p 

@@ -69,8 +69,8 @@ const Header = () => {
                     Palace
                   </span>
                 </div>
-                <span className={`text-[8px] md:text-[9px] font-bold tracking-[0.6em] uppercase leading-none mt-0.5 transition-colors duration-300 ${
-                  showSolidHeader ? "text-slate-400 text-center" : "text-white/60"
+                <span className={`text-[8px] md:text-[9px] text-center font-bold tracking-[0.6em] uppercase leading-none mt-0.5 transition-colors duration-300 ${
+                  showSolidHeader ? "text-slate-400 text-center" : "text-white/60 text-center"
                 }`}>
                   Hotel
                 </span>
@@ -91,7 +91,7 @@ const Header = () => {
                           : isActive ? "text-white" : "text-white/70 hover:text-white"
                       }`}
                     >
-                      {link.label}
+                     <span className={`${showSolidHeader ? "text-emerald-700" : "text-white"}`}> {link.label}</span> 
                       {/* Animated Underline */}
                       <span className={`absolute -bottom-1 left-1/2 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0 ${isActive ? "w-full left-0" : ""}`} />
                     </Link>
